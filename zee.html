@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4thpz||Zee</title>
+    <link rel="stylesheet" href="zee.css">
+</head>
+<body>
+    <div class="whole">
+        <div class="sub-4">
+            <section id="side">
+                <div class="card">
+                    <img src="i.jpg" alt="">
+                    <h1>4thpz Zee</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                   
+                    <a href="#contact">CONTACT</a>
+                </div>
+            </section>
+        </div>
+        <div class="sub-8">
+            <section id="home">
+                <div class="homeco">
+                    <h1>4thpz Zee</h1>
+                    <p>Full Stack Developer</p>
+                    <nav>
+                        <ul>
+                            <li><a href="#home">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#portfolio">PORTFOLIO</a></li>
+                            <li><a href="#testimonials">TESTIMONIALS</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section id="about">
+                <div class="aboutco">
+                    <h1>ABOUT ME </h1>
+                    <p> 
+                        My name is PLACIDE ZIGIRA and Iam a full-stack web Application developer and software developer,<br> currently
+                        living in Kigali RWANDA. I am a student in computer software development, definetly my primary <br> focus and inspiration
+                        for my studies is web development. In my free time , I study human computer interface <br> and psychology of human computer
+                        interaction.  I am both driven and self-motivated, and I am constantly <br> experimenting with new technologies and 
+                        techniques. <br> <br> Iam very passionate about web development and strive to better myself as a developer, <br> and the develoment 
+                        community as a whole. 
+                        
+                    </p>
+                </div>
+            </section>
+            <section id="portfolio">
+                <div class="portco">
+                    <h1>PORTFOLIO</h1>
+                    <div class="row">
+                        <div class="column">
+                            
+                            <img src="ic.jpg" alt="">
+                            <img src="b.jpg" alt="">
+                            <img src="gc.jpg" alt="">
+                            <img src="qc.jpg" alt="">
+                            <img src="c.jpg" alt="">
+                        </div>
+                        <div class="column">
+                            <img src="h.jpg" alt="">
+                            <img src="kc.jpg" alt="">
+                            <img src="o.jpg" alt="">
+                            <img src="k.jpg" alt="">
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="testimonials">
+                <div class="testslideshow">
+                    <h1>TESTIMONIALS</h1>
+                     <div class="mySlides">
+                         <img src="kim.jpg" alt="" height="350px">
+                         <q>Zee Saved Us From A Web Disaster</q>
+                         <hr><p class="names">Kimenyi P.</p>
+                     </div>
+                     <div class="mySlides">
+                        <img src="Ton.jpg" alt="" height="350px">
+                        <q>Zee Is Just Awesome. Iam So Happy To Have Met Him!</q>
+                        <hr><p class="names">Mutoni A.</p>
+                    </div>
+                    <div class="mySlides">
+                        <img src="Mom.jpg" alt="" height="350px">
+                        <q>No One Is Better Than Zee</q>
+                        <hr><p class="names">Gahongayire C.</p>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlides(1)"></span>
+                    <span class="dot" onclick="currentSlides(1)"></span>
+                    <span class="dot" onclick="currentSlides(1)"></span>
+                </div>
+            </section>
+            <section id="contact">
+                    <div class="container">
+                        <h1>CONTACT</h1>
+                        <form action="action_page.php">
+                      
+                          <label for="fname">First Name</label>
+                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                      
+                          <label for="lname">Last Name</label>
+                          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                      
+                          <label for="country">Country</label>
+                          <select id="country" name="country">
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                          </select>
+                      
+                          <label for="subject">Subject</label>
+                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                      
+                          <input type="submit" value="SUBMIT">
+                      
+                        </form>
+                      </div>
+                
+            </section>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+</body>
+</html>

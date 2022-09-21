@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   scroll-behavior: smooth;
+}
+.whole::after{
+   content: "";
+   clear: both;
+   display: table;
+}
+[class*=sub-] {
+    float: left;
+}
+ /* side home page */
+#side{
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}
+/* profile card on the side home page */
+.card{
+    background-color: #ddd;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0,0.2);
+    height: 100vh;
+    border: 2px solid #ddd;
+}
+.card img{
+    height: 485px;
+}
+.card h1{
+    font-size: 38px;
+    color: rgb(39, 39, 39);
+}
+.card p{
+    color: rgb(88,88,88);
+    font-size: 15px;
+    margin-top: 20px;
+}
+.card a{
+    background-color: royalblue;
+    position: absolute;
+   margin-top: 20px;
+    left: 30%;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+/* home page content */
+#home{
+   
+   height: 75vh;
+}
+.homeco{
+    margin-left: 450px;
+    text-align: center;
+    
+}
+.homeco h1{
+    font-size: 54px;
+   position: absolute;
+   top: 30%;
+   left: 55%;
+}
+.homeco p{
+    position: absolute;
+    top: 44%;
+    left: 58%;
+    color: rgb(88,88,88);
+}
+ul{
+    display: inline;
+}
+li{
+    display: inline-block;
+    list-style: none;
+    padding: 0 10px;
+}
+li a{
+    text-decoration: none;
+    color: rgb(88,88,88);
+    font-weight: bold;
+}
+li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: royalblue;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+li:hover::after{
+    width: 100%;
+}
+.homeco nav{
+    position: absolute;
+   top: 58%;
+   left: 45%;
+}
+/*about section */
+#about{
+  
+    height: 50vh;
+}
+.aboutco{
+    margin-left: 430px;
+   padding: 50px 0;
+}
+.aboutco h1{
+    padding: 30px 0;
+    color: rgb(88,88,88);
+    font-weight: bold;
+}
+
+.aboutco p{
+   color: rgb(44, 57, 70);
+}
+/* portfolio*/
+#portfolio{
+   
+    height: 370vh;
+}
+.portco{
+    margin-left: 400px;
+    padding: 30px 0;
+}
+.portco h1{
+    color: rgb(88,88,88);
+    padding: 50px 0;
+    margin-left: 30px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column{
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+.column img{
+    width: 100%;
+}
+#testimonials{
+    height: 100vh;
+}
+.testslideshow{
+    margin-left: 400px;
+    position: relative;
+    background-color: #f1f1f1;
+}
+.testslideshow h1{
+    padding: 30px 10px;
+    color: rgb(88,88,88);
+    font-weight: bold;
+}
+/* Slides */
+.mySlides {
+    display: none;
+    padding: 80px;
+    text-align: left;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+    margin-left: 400px;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+q{position: absolute;
+    top: 30%;
+    left: 50%;
+    font-style: italic;
+}
+.names{position: absolute;
+    top: 80%;
+    left: 80%;
+    font-style: italic;
+    color: cornflowerblue;
+}
+hr{
+    width: 8%;
+    position: absolute;
+    left: 70%;
+    top: 82%;
+}
+#contact{
+   
+    height: 100vh;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: slategrey;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    padding: 50px;
+    margin-left: 380px;
+  }
+  .container h1{
+    padding: 30px 10px;
+    color: rgb(88,88,88);
+    font-weight: bold;
+  }
+/* phone responsive*/
+@media only screen and (max-width: 600px){
+    [class*="sub-"] {
+        width: 100%;
+    }
+    .card{
+        height: 105vh;
+     background-color: white;
+     max-width: 100%;
+    }
+    .card img{
+        padding-top: 20px;
+    }
+    #side{ 
+         position: relative;
+         height: 10vh;
+    }
+    .homeco{
+        display: none;
+    }
+    .aboutco{
+        margin: auto;
+        padding-top: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #portfolio{
+   
+        height: 465vh;
+    }
+    .portco {
+        margin: auto;
+        padding-top: 150px;
+    }
+    .column{
+        flex: 100%;
+        max-width: 100%;
+    }
+    .testslideshow{
+        margin: auto;
+        position: relative;
+        top: 285%;
+    }
+    .dot-container{
+        margin: auto;
+        position: relative;
+        top: 285%;
+    }
+    .testslideshow img{
+        height: 300px;
+      
+    }
+    q{position: absolute;
+        top: 85%;
+        left: 10%;
+        font-style: italic;
+        text-align: center;
+    }
+    .names{position: absolute;
+        top: 95%;
+        left: 65%;
+        font-style: italic;
+        color: cornflowerblue;
+    }
+    hr{
+        width: 8%;
+        position: absolute;
+        left: 55%;
+        top: 97%;
+    }
+    .container{
+        margin: auto;
+        position: relative;
+        top: 285%;
+    }
+   
+}
